@@ -19,7 +19,7 @@ Unlike *Knit*, *Preview* does not run any R code chunks, what was last run in th
 
 ```{r}
 gapminder_1952 = gapminder %>% filter(year==1952)
-ggplot(gapminder_1952, aes(x=gdpPercap, y = lifeExp, size= pop)) +
-   geom_point() + scale_x_log10() + scale_y_log10() + facet_wrap(~ continent)
+ggplot(gapminder_1952, aes(x=gdpPercap, y = lifeExp, size= pop, color=continent)) +
+   geom_point() +xlim(0,15000)
 ```
 
